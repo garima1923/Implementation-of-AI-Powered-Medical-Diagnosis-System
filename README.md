@@ -1,4 +1,3 @@
-# Implementation-of-AI-Powered-Medical-Diagnosis-System
 Overview
 This project is a machine learning-based web application that predicts multiple diseases, including:
 ✔ Diabetes
@@ -24,8 +23,7 @@ Pandas & NumPy (for data processing)
 Pickle (for model storage and loading)
 Installation Guide
 1. Clone the Repository
-git clone https://github.com/your-username/disease-prediction.git
-cd disease-prediction
+https://github.com/tushant687/Implementation-of-AI-Powered-Medical-Diagnosis-.git
 2. Install Dependencies
 pip install -r requirements.txt
 3. Run the Application
