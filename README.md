@@ -10,9 +10,13 @@ The application is built using Streamlit and leverages trained machine learning 
 
 Features
 ✅ Multi-Disease Prediction: Supports predictions for multiple diseases
+
 ✅ Interactive User Interface: Built with Streamlit
+
 ✅ Pre-Trained Machine Learning Models: Ensures quick and accurate results
+
 ✅ Dataset Integration: Uses preprocessed datasets for better efficiency
+
 ✅ Instant Diagnosis: Real-time results based on input parameters
 
 Technologies Used
