@@ -16,17 +16,16 @@ Features
 ✅ Instant Diagnosis: Real-time results based on input parameters
 
 Technologies Used
+
 Python
 Streamlit (for the web interface)
 Scikit-Learn (for machine learning)
 Pandas & NumPy (for data processing)
 Pickle (for model storage and loading)
 Installation Guide
-1. Clone the Repository
-https://github.com/tushant687/Implementation-of-AI-Powered-Medical-Diagnosis-.git
-2. Install Dependencies
+1. Install Dependencies
 pip install -r requirements.txt
-3. Run the Application
+2. Run the Application
 streamlit run app.py
 Project Structure
 disease-prediction/
