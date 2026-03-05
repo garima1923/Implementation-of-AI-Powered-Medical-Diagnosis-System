@@ -1,90 +1,258 @@
-Overview
-This project is a machine learning-based web application that predicts multiple diseases, including:
-✔ Diabetes
-✔ Heart Disease
-✔ Parkinson's Disease
-✔ Lung Cancer
-✔ Hypo-Thyroid Disease
 
-The application is built using Streamlit and leverages trained machine learning models to provide predictions based on user inputs.
 
-Features
-✅ Multi-Disease Prediction: Supports predictions for multiple diseases
+# 🏥 AI Medical Diagnosis System
 
-✅ Interactive User Interface: Built with Streamlit
+### Advanced Multi-Disease Prediction & Healthcare Guidance Web App
 
-✅ Pre-Trained Machine Learning Models: Ensures quick and accurate results
+An AI-powered healthcare web application built using **Machine Learning + Streamlit** that predicts multiple diseases and provides intelligent health recommendations including diet, yoga, home remedies, emergency advice, and nearby doctor search.
 
-✅ Dataset Integration: Uses preprocessed datasets for better efficiency
+---
 
-✅ Instant Diagnosis: Real-time results based on input parameters
+## 📌 Project Overview
 
-Technologies Used
+The **AI Medical Diagnosis System** is an interactive web-based platform designed to assist users in predicting various medical conditions using trained machine learning models.
 
-Python
+This system integrates:
 
-Streamlit (for the web interface)
+* 🧠 Predictive Machine Learning Models
+* 📄 OCR-based Lab Report Analyzer
+* 📊 Real-time Disease Prediction
+* 🩺 Health Guidance System
+* 📍 Nearby Doctor & Hospital Finder
 
-Scikit-Learn (for machine learning)
+The application is developed as a practical implementation of AI in healthcare diagnostics.
 
-Pandas & NumPy (for data processing)
+---
 
-Pickle (for model storage and loading)
+## 🎯 Diseases Covered
 
-Installation Guide
+The system predicts the following conditions:
 
-1. Install Dependencies
+* 🩸 Diabetes
+* ❤️ Heart Disease
+* 🧠 Parkinson’s Disease
+* 🫁 Lung Cancer
+* 🧬 Hypo-Thyroid
+
+Each prediction includes:
+
+* Result (Positive / Negative)
+* Probability score (if available)
+* Diet recommendations
+* Yoga & exercise suggestions
+* Daily home remedies
+* Emergency precautions
+* Medication precautions
+* Nearby specialist search
+
+---
+
+## 🚀 Key Features
+
+### 🔹 1. Multi-Disease Prediction
+
+Users can manually enter medical values or upload reports to receive AI predictions.
+
+### 🔹 2. OCR-Based Lab Report Analyzer
+
+Users can upload lab report images.
+The system extracts medical values using **pytesseract OCR** and automatically fills prediction forms.
+
+### 🔹 3. Intelligent Health Guidance
+
+For each disease, the system provides:
+
+* Preventive measures
+* Recommended diet
+* Foods to avoid
+* Yoga asanas
+* Home remedies
+* Emergency medical guidance
+
+### 🔹 4. Nearby Doctor & Hospital Finder
+
+Integrated Google Maps search for:
+
+* Cardiologists
+* Endocrinologists
+* Neurologists
+* Pulmonologists
+
+Based on selected disease and location.
+
+### 🔹 5. Prediction History
+
+Stores user prediction records during session.
+
+### 🔹 6. Clean & Interactive UI
+
+Modern glassmorphism UI design with background effects and interactive components.
+
+---
+
+## 🧠 Machine Learning Models
+
+The system uses **Random Forest Classifiers** trained on real-world medical datasets.
+
+### Models Included:
+
+* `diabetes_model.sav`
+* `heart_disease_model.sav`
+* `parkinsons_model.sav`
+* `lungs_disease_model.sav`
+* `Thyroid_model.sav`
+
+Models are loaded dynamically from the `Models/` folder.
+
+---
+
+## 📊 Technologies Used
+
+### 🔹 Programming Language
+
+* Python
+
+### 🔹 Framework
+
+* Streamlit
+
+### 🔹 Machine Learning
+
+* scikit-learn
+* Random Forest Classifier
+
+### 🔹 Data Handling
+
+* pandas
+* numpy
+
+### 🔹 Visualization
+
+* matplotlib
+* seaborn
+
+### 🔹 OCR
+
+* pytesseract
+
+### 🔹 Image Processing
+
+* Pillow (PIL)
+
+---
+
+## 📂 Project Structure
+
+```
+AI-Medical-Diagnosis-System/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── Models/
+│   ├── diabetes_model.sav
+│   ├── heart_disease_model.sav
+│   ├── parkinsons_model.sav
+│   ├── lungs_disease_model.sav
+│   └── Thyroid_model.sav
+│
+├── datasets/
+│   ├── diabetes_data.csv
+│   ├── heart_disease_data.csv
+│   ├── parkinson_data.csv
+│   ├── hypothyroid.csv
+│   └── survey lung cancer.csv
+│
+├── notebooks/
+│   ├── Heart_Disease_Prediction.ipynb
+│   ├── Lung_Cancer.ipynb
+│   ├── Parkinson's_Disease_Detection.ipynb
+│   └── Thyroid.ipynb
+```
+
+---
+
+## ▶ How To Run The Project Locally
+
+### Step 1: Clone Repository
+
+```
+https://github.com/tushant687/AI-Medical-Diagnosis-System/tree/main
+cd AI-Medical-Diagnosis-System
+```
+
+### Step 2: Install Dependencies
+
+```
 pip install -r requirements.txt
+```
 
-2. Run the Application
+### Step 3: Run Application
+
+```
 streamlit run app.py
+```
 
-Project Structure
+The app will open in your browser.
 
-disease-prediction/
-│-- Models/                        # Pre-trained machine learning models  
-│   ├── diabetes_model.sav  
-│   ├── heart_disease_model.sav  
-│   ├── parkinsons_model.sav  
-│   ├── lungs_disease_model.sav  
-│   ├── thyroid_model.sav  
-│-- Data/                          # Processed and raw datasets  
-│   ├── diabetes_data.csv  
-│   ├── hypothyroid.csv  
-│   ├── parkinson_data.csv  
-│   ├── prepocessed_hypothyroid.csv  
-│   ├── prepocessed_lungs_data.csv  
-│   ├── survey_lung_cancer.csv  
-│-- app.py                         # Main Streamlit web application  
-│-- requirements.txt                # Required dependencies  
-│-- README.md                       # Project documentation 
+---
 
-How It Works
+## 📈 Sample Use Case
 
-The user selects a disease from the dropdown menu.
-They input relevant health parameters (e.g., age, glucose levels, heart rate).
-The app uses a trained ML model to make a prediction.
-The result is displayed, indicating whether the user is at risk or not.
+1. Upload medical lab report image
+2. OCR extracts values like:
 
-Datasets Used
+   * Glucose
+   * TSH
+   * Cholesterol
+3. Click prediction button
+4. Get:
 
-The models are trained on various medical datasets:
+   * AI result
+   * Health advice
+   * Nearby doctors
 
-Diabetes Dataset (diabetes_data.csv)
+---
 
-Heart Disease Dataset
+## 🔐 Data Privacy
 
-Parkinson's Disease Dataset (parkinson_data.csv)
+* No external data storage
+* No cloud database
+* Session-based temporary storage only
+* Google Maps used only for doctor search
 
-Lung Cancer Survey Dataset (survey_lung_cancer.csv)
+---
 
-Hypothyroid Dataset (hypothyroid.csv)
+# 📷 Dashboard Preview
+ <img width="1816" height="886" alt="Screenshot 2026-02-15 171917" src="https://github.com/user-attachments/assets/4b42a08f-b2ad-4ffe-b7a7-0af47dd8637e" />
+ 
+<img width="1887" height="747" alt="Screenshot 2026-02-15 171934" src="https://github.com/user-attachments/assets/ad371952-1392-4716-a794-4f60c3232ea7" />
+<img width="1431" height="811" alt="Screenshot 2026-02-15 171949" src="https://github.com/user-attachments/assets/9b43e855-20ba-4522-8f15-6b2cb9bda8a3" />
+<img width="1859" height="827" alt="Screenshot 2026-02-15 172011" src="https://github.com/user-attachments/assets/6acc9903-8292-430c-9db3-73c6f17d7659" />
+<img width="1492" height="835" alt="Screenshot 2026-02-15 172050" src="https://github.com/user-attachments/assets/28e290ed-840a-4181-9921-1dcc6dc1b071" />
+<img width="1439" height="810" alt="Screenshot 2026-02-15 172110" src="https://github.com/user-attachments/assets/0ae098f6-5ebe-42ac-8fb9-f8c413d94e4f" />
 
-Future Enhancements
-🚀 Improve Model Accuracy with deep learning techniques
-🚀 Add More Disease Predictions such as Alzheimer's and Stroke
-🚀 Integrate a User Dashboard for tracking past results
-🚀 Deploy the App Online using Heroku or AWS
 
-License
-This project is licensed under the MIT License.
+---
+
+## ⚠ Important Disclaimer
+
+This application is for **educational and informational purposes only**.
+
+* It does NOT replace professional medical advice.
+* AI predictions may not be 100% accurate.
+* Always consult a qualified healthcare professional.
+
+---
+
+## 👨‍💻 Developed By
+
+Tushant Kumar
+
+Under the supervision of
+Ms. Srishti Agarwal (Assistant Professor)
+
+Meerut Institute of Technology, Meerut
+
+---
